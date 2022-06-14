@@ -1,16 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
-
 <?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="pl.lublin.wsei.java.cwiczenia.HelloController">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-    </padding>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
 
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
-</VBox>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.lublin.wsei.java.cwiczenia.HelloController">
+   <children>
+      <Button layoutX="78.0" layoutY="47.0" mnemonicParsing="false" onAction="#btnOpenFileAction" text="Otwórz plik" textFill="#ef0909" />
+      <Label fx:id="lbFile" layoutX="259.0" layoutY="46.0" prefHeight="26.0" prefWidth="404.0" style="-fx-font-style: italic;" text=" Proszę wczytać plik..." />
+      <ListView fx:id="lstInfografiki" layoutX="36.0" layoutY="104.0" prefHeight="451.0" prefWidth="347.0" />
+      <Label layoutX="422.0" layoutY="172.0" prefHeight="18.0" prefWidth="77.0" text="Miniaturka" />
+      <ImageView fx:id="imgMiniaturka" fitHeight="285.0" fitWidth="394.0" layoutX="392.0" layoutY="196.0" pickOnBounds="true" preserveRatio="true" />
+      <TextField fx:id="txtAdresStrony" layoutX="50.0" layoutY="593.0" prefHeight="26.0" prefWidth="589.0" />
+      <Label layoutX="58.0" layoutY="569.0" text="Adres strony" />
+      <Button fx:id="btnPokazInfografike" layoutX="689.0" layoutY="494.0" mnemonicParsing="false" text="Pokaż" />
+      <Button fx:id="btnPrzejdzDoStrony" layoutX="661.0" layoutY="593.0" mnemonicParsing="false" text="Załaduj" />
+   </children>
+</AnchorPane>
