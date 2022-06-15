@@ -15,9 +15,9 @@ public class HelloApplication extends Application {
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("gusInfoGraphic.fxml"));
         Parent root=fxmlLoader.load();
-        ModuleLayer.Controller controller=fxmlLoader.getController();
-//controller.setHostServices(this.getHostServices());
-//controller.setStage(primaryStage);
+        HelloController controller=fxmlLoader.getController();
+controller.setHostServices(this.getHostServices());
+        controller.setStage(stage);
 
         Scene scene = new Scene(fxmlLoader.load(), 800, 700);
         stage.setTitle("Hello!");
@@ -25,13 +25,6 @@ public class HelloApplication extends Application {
         stage.show();
 
     }
-
-
-
-
-
-
-
 
     public static void main(String[] args) {
         launch();
